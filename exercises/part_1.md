@@ -58,7 +58,7 @@
       
     - To add your SSH private key to the ssh-agent:
 
-      'ssh-add ~/.ssh/<private_ssh_key_filename>'
+      `ssh-add ~/.ssh/<private_ssh_key_filename>`
     
     - To test the GitHub SSH connection:
       
