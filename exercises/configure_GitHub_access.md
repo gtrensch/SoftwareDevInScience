@@ -41,7 +41,7 @@ In order to set up an SSH key-based GitHub connection, perform the following ste
   
   Verify that your correct GitHub username is displayed. If this is not the case, you can explicitly set the username for the GitHub remote server in the `~/.ssh/config` file. See the hint below.
   
-#### Hints
+#### Hints :+1:
 
 - For convinence it may be desirable not have to enter your passphrase at any authentication attempt. So you can add your private SSH key to the ssh-agent.
   
