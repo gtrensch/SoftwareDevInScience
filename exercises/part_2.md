@@ -46,3 +46,5 @@
 10. Developer A: Create a pull request from the feature-branch against the workshop repository. 
 
 11. (optional) Use the graphical repository browser *gitk* to explore the history of your repository.
+
+    * *gitk* documentation: *https://git-scm.com/docs/gitk*
