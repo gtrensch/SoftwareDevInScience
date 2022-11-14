@@ -40,6 +40,7 @@ from parameters import *
 from functions.fibonacci import *
 from functions.factorial import *
 
+print('Starting the code...')
 #
 # FUNCTION TABLE
 #
