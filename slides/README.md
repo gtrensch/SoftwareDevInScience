@@ -1,1 +1,1 @@
-## Course Materials
+## Course Material
