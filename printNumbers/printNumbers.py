@@ -23,7 +23,7 @@
 # Software Development in Science Workshop
 #     Python GitHub project example
 #
-
+# opened in VSC, saved and closed
 """
 Usage:
   printNumbers.py -h --help
