@@ -24,7 +24,7 @@
 #
 
 CONST_VERSION = 'V1.0'
-CONST_VERSION_STRING = '+ + PrintNumbers ' + CONST_VERSION + ' (Software Development in Science) + +'
+CONST_VERSION_STRING = f'+ + PrintNumbers {CONST_VERSION} (Software Development in Science) + +'
 CONST_DEF_OPERAND_VAL = 10
 CONST_MAX_OPERAND_VAL = 20
 CONST_FUNC_CODE_FIBONACCI = 0
@@ -51,9 +51,9 @@ class Parameters(object):
     @operand.setter
     def operand(self, n):
         if n <= 0 or n > CONST_MAX_OPERAND_VAL:
-            print('Error: Operand out of range: 0 < <operand> <=', CONST_MAX_OPERAND_VAL)
-            print('       The default value ( n =', CONST_DEF_OPERAND_VAL, ') is used.')
-            print('')
+            print(f'Error: Operand out of range: 0 < <operand> <= {CONST_MAX_OPERAND_VAL}')
+            print(f'       The default value ( n = {CONST_DEF_OPERAND_VAL} ) is used.')
+            print(f'')
             n = CONST_DEF_OPERAND_VAL
         self.__operand = n
 
@@ -66,8 +66,8 @@ class Parameters(object):
         self.__functionIndex = value
 
     def PrintParameters(self):
-        print('Following Parameters are in use:')
-        print('--------------------------------')
-        print('Function Code: ', self.functionIndex)
-        print('Operand value: ' + str(self.operand))
-        print('')
+        print(f'Following Parameters are in use:')
+        print(f'--------------------------------')
+        print(f'Function Code:  {self.functionIndex}')
+        print(f'Operand value: {self.operand}')
+        print(f'')
