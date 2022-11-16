@@ -26,4 +26,5 @@ def Factorial(n):
     :param n:  Operand
     :return:   n!
     '''
+    print("I'm in the Factorial func!")
     return(math.factorial(n))
