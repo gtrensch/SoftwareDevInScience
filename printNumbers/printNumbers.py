@@ -35,6 +35,14 @@ Options:
   --factorial     Print the factorial.
 """
 
+
+
+"""
+
+This is a change for the Git exercise 
+
+"""
+
 from docopt import docopt
 from parameters import *
 from functions.fibonacci import *
