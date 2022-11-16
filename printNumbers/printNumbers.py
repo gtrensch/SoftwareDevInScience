@@ -43,9 +43,9 @@ from functions.factorial import *
 #
 # FUNCTION TABLE
 #
-functionTable = { CONST_FUNC_CODE_FIBONACCI : FibonacciSequence,
-                  CONST_FUNC_CODE_FACTORIAL : Factorial,
-                }
+functionTable = {CONST_FUNC_CODE_FIBONACCI: FibonacciSequence,
+                 CONST_FUNC_CODE_FACTORIAL: Factorial,
+                 }
 
 #
 # MAIN ENTRY
@@ -56,7 +56,7 @@ if __name__ == '__main__':
     print('')
 
     # Process command line arguments.
-    params = Parameters(docopt(__doc__, version = CONST_VERSION))
+    params = Parameters(docopt(__doc__, version=CONST_VERSION))
     params.PrintParameters()
 
     # Call corresponding function with <functionIndex> from <functionTable>.
