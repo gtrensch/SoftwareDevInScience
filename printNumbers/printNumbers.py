@@ -43,7 +43,7 @@ from functions.factorial import *
 #
 # FUNCTION TABLE
 #
-functionTable = { CONST_FUNC_CODE_FIBONACCI : FibonacciSequence,
+functionTable = { CONST_FUNC_CODE_FIBONACCI : FibonacciRecursion,
                   CONST_FUNC_CODE_FACTORIAL : Factorial,
                 }
 
