@@ -23,6 +23,7 @@
 # Software Development in Science Workshop
 #     Python GitHub project example
 #
+# yet, another comment
 
 """
 Usage:
