@@ -27,24 +27,27 @@
 """
 Usage:
   printNumbers.py -h --help
-  printNumbers.py [--fibonacci|--factorial] <operand>
+  printNumbers.py [--fibonacci|--factorial|--gaussiansummation] <operand>
 
 Options:
-  -h --help       Print usage.
-  --fibonacci     Print the fibonacci sequence.
-  --factorial     Print the factorial.
+  -h --help               Print usage.
+  --fibonacci             Print the fibonacci sequence.
+  --factorial             Print the factorial.
+  --gaussiansummation     Print the sum of the first n integers
 """
 
 from docopt import docopt
 from parameters import *
 from functions.fibonacci import *
 from functions.factorial import *
+from functions.gaussian_summation import *
 
 #
 # FUNCTION TABLE
 #
-functionTable = { CONST_FUNC_CODE_FIBONACCI : FibonacciSequence,
+functionTable = { CONST_FUNC_CODE_FIBONACCI : FibonacciRecursion,
                   CONST_FUNC_CODE_FACTORIAL : Factorial,
+                  CONST_FUNC_CODE_GAUSSIAN_SUMMATION : GaussianSummation,
                 }
 
 #
@@ -67,3 +70,5 @@ if __name__ == '__main__':
         print('fib(' + str(params.operand) + ') =', result)
     elif params.functionIndex == CONST_FUNC_CODE_FACTORIAL:
         print(str(params.operand) + '! =', str(result))
+    elif params.functionIndex == CONST_FUNC_CODE_GAUSSIAN_SUMMATION:
+        print('gaussian_summation(' + str(params.operand) + ') =', result)
