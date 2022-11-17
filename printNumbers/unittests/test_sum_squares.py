@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# runTestSuite.py
+# test_sum_squares.py
 #
 # This file is part of PrintNumbers.
 #
@@ -20,26 +20,43 @@
 # along with PrintNumbers.  If not, see <http://www.gnu.org/licenses/>.
 
 #
-# Run unit test suite.
+# Unit tests: 'sum_squares'.
 #
 
-import unittest
+import sys, os
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
-import test_factorial
-import test_fibonacci
-import test_sum_squares
+import unittest
+from functions.sum_squares import *
+
+class TestSum_squares(unittest.TestCase):
+
+    def test_value_neg(self):
+        self.assertEqual(Sum_squares(-2), 0)
+
+    def test_value_0(self):
+        self.assertEqual(Sum_squares(0), 0)
+
+    def test_value_1(self):
+        self.assertEqual(Sum_squares(1), 1)
+
+    def test_value_2(self):
+        self.assertEqual(Sum_squares(2), 5)
+
+    def test_value_3(self):
+        self.assertEqual(Sum_squares(3), 14)
+
+    def test_value_10(self):
+        self.assertEqual(Sum_squares(10), 10 * 11 * 21 / 6)
 
 
 def suite():
-    suite = unittest.TestSuite()
-
-    suite.addTest(test_factorial.suite())
-    suite.addTest(test_fibonacci.suite())
-    suite.addTest(test_sum_squares.suite())
-
+    suite = unittest.makeSuite(TestSum_squares, 'test')
     return suite
 
-
-if __name__ == "__main__":
+def run():
     runner = unittest.TextTestRunner(verbosity = 2)
     runner.run(suite())
+
+if __name__ == "__main__":
+    run()
