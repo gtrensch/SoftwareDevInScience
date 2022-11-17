@@ -39,12 +39,14 @@ from docopt import docopt
 from parameters import *
 from functions.fibonacci import *
 from functions.factorial import *
+from functions.adding_numbers import *
 
 #
 # FUNCTION TABLE
 #
 functionTable = { CONST_FUNC_CODE_FIBONACCI : FibonacciSequence,
                   CONST_FUNC_CODE_FACTORIAL : Factorial,
+                  CONST_FUNC_CODE_Adding : Adding_same_number,
                 }
 
 #
@@ -67,3 +69,5 @@ if __name__ == '__main__':
         print('fib(' + str(params.operand) + ') =', result)
     elif params.functionIndex == CONST_FUNC_CODE_FACTORIAL:
         print(str(params.operand) + '! =', str(result))
+    elif params.functionIndex == CONST_FUNC_CODE_Adding:
+        print('add(' + str(params.operand) + ') =', result)
