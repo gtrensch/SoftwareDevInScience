@@ -26,4 +26,4 @@
 
 5. Push the new branch to your (forked) repository on GitHub.
 
-6. Create and issue a pull request against the workshop repository.
+6. Create a pull request against the workshop repository.
