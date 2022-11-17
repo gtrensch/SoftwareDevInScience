@@ -27,6 +27,7 @@ import unittest
 
 import test_factorial
 import test_fibonacci
+import test_gaussian_summation
 
 
 def suite():
