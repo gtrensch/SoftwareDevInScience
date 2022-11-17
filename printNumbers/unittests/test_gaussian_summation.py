@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 #
-# runTestSuite.py
+# test_factorial.py
 #
 # This file is part of PrintNumbers.
 #
-# Copyright (C) 2017 G. Trensch, Simulation & Datalab Neuroscience, JSC, FZ Juelich
+# Copyright (C) 2022 C. Scherer, Simulation & Datalab Neuroscience, JSC, FZ Juelich
 #
 # PrintNumbers is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -20,25 +20,37 @@
 # along with PrintNumbers.  If not, see <http://www.gnu.org/licenses/>.
 
 #
-# Run unit test suite.
+# Unit tests: 'gaussian_summation'.
 #
 
-import unittest
+import sys, os
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
-import test_factorial
-import test_fibonacci
+import unittest
+from functions.factorial import *
+
+class TestGaussianSummation(unittest.TestCase):
+
+    def test_value_0(self):
+        self.assertEqual(Factorial(0), 0)
+
+    def test_value_1(self):
+        self.assertEqual(Factorial(1), 1)
+
+    def test_value_2(self):
+        self.assertEqual(Factorial(2), 3)
+
+    def test_value_20(self):
+        self.assertEqual(Factorial(20), 210)
 
 
 def suite():
-    suite = unittest.TestSuite()
-
-    suite.addTest(test_factorial.suite())
-    suite.addTest(test_fibonacci.suite())
-    suite.addTest(test_gaussian_summation.suite())
-
+    suite = unittest.makeSuite(TestGaussianSummation, 'test')
     return suite
 
-
-if __name__ == "__main__":
+def run():
     runner = unittest.TextTestRunner(verbosity = 2)
     runner.run(suite())
+
+if __name__ == "__main__":
+    run()
