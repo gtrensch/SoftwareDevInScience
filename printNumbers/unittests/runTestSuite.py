@@ -27,6 +27,7 @@ import unittest
 
 import test_factorial
 import test_fibonacci
+import test_sum_squares
 
 
 def suite():
@@ -34,6 +35,7 @@ def suite():
 
     suite.addTest(test_factorial.suite())
     suite.addTest(test_fibonacci.suite())
+    suite.addTest(test_sum_squares.suite())
 
     return suite
 

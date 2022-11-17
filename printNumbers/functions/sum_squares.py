@@ -21,9 +21,11 @@
 
 import math
 
-def Factorial(n):
+def Sum_of_squares(n):
     '''
     :param n:  Operand
     :return:   n!
     '''
+    if(n < 0):
+        return(0)
     return(n * (n + 1) * (2 * n + 1) / 6)
