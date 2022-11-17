@@ -28,10 +28,13 @@
      
      <img src="https://github.com/gtrensch/SoftwareDevInScience/blob/main/exercises/solutions/figures/add_activity_cards_01.png" width=70% height=70%>
      
+     Hint :+1: You must type a title and then hit enter to create a draft-card.
+     
      ----
      
      <img src="https://github.com/gtrensch/SoftwareDevInScience/blob/main/exercises/solutions/figures/add_activity_cards_02.png" width=30% height=30%>
-
+     
+     
 3. Add the project to your forked repository.
 
      **Solution:**
