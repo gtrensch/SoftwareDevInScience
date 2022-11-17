@@ -1,3 +1,4 @@
+#! /bin/env python
 # -*- coding: utf-8 -*-
 #
 # printNumbers.py
@@ -27,24 +28,28 @@
 """
 Usage:
   printNumbers.py -h --help
-  printNumbers.py [--fibonacci|--factorial] <operand>
+  printNumbers.py [--fibonacci|--factorial|--square] <operand>
 
 Options:
   -h --help       Print usage.
   --fibonacci     Print the fibonacci sequence.
   --factorial     Print the factorial.
+  --square        Print the square of the operand.
 """
 
 from docopt import docopt
 from parameters import *
 from functions.fibonacci import *
 from functions.factorial import *
+from functions.square import *
+
 
 #
 # FUNCTION TABLE
 #
 functionTable = { CONST_FUNC_CODE_FIBONACCI : FibonacciSequence,
                   CONST_FUNC_CODE_FACTORIAL : Factorial,
+                  CONST_FUNC_CODE_SQUARE : Square,
                 }
 
 #
@@ -67,3 +72,5 @@ if __name__ == '__main__':
         print('fib(' + str(params.operand) + ') =', result)
     elif params.functionIndex == CONST_FUNC_CODE_FACTORIAL:
         print(str(params.operand) + '! =', str(result))
+    elif params.functionIndex == CONST_FUNC_CODE_SQUARE:
+        print(str(params.operand) + ' squared is ', str(result))
