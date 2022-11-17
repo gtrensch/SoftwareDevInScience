@@ -27,21 +27,21 @@ import sys, os
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
 import unittest
-from functions.factorial import *
+from functions.gaussian_summation import *
 
 class TestGaussianSummation(unittest.TestCase):
 
     def test_value_0(self):
-        self.assertEqual(Factorial(0), 0)
+        self.assertEqual(GaussianSummation(0), 0)
 
     def test_value_1(self):
-        self.assertEqual(Factorial(1), 1)
+        self.assertEqual(GaussianSummation(1), 1)
 
     def test_value_2(self):
-        self.assertEqual(Factorial(2), 3)
+        self.assertEqual(GaussianSummation(2), 3)
 
     def test_value_20(self):
-        self.assertEqual(Factorial(20), 210)
+        self.assertEqual(GaussianSummation(20), 210)
 
 
 def suite():
