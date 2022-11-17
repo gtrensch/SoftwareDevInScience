@@ -29,6 +29,7 @@ CONST_DEF_OPERAND_VAL = 10
 CONST_MAX_OPERAND_VAL = 22
 CONST_FUNC_CODE_FIBONACCI = 0
 CONST_FUNC_CODE_FACTORIAL = 1
+CONST_FUNC_CODE_GAMMA     = 2
 
 class Parameters(object):
 
@@ -43,6 +44,8 @@ class Parameters(object):
             self.functionIndex = CONST_FUNC_CODE_FIBONACCI
         elif cmdLineArgs['--factorial']:
             self.functionIndex = CONST_FUNC_CODE_FACTORIAL
+        elif cmdLineArgs['--gamma']:
+            self.functionIndex = CONST_FUNC_CODE_GAMMA
 
     @property
     def operand(self):
