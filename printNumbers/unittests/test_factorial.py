@@ -42,7 +42,9 @@ class TestFactorial(unittest.TestCase):
 
     def test_value_20(self):
         self.assertEqual(Factorial(20), 2432902008176640000)
-
+    
+    def test_jane(self):
+        self.assertEqual(Factorial(5),3)
 
 def suite():
     suite = unittest.makeSuite(TestFactorial, 'test')
@@ -54,3 +56,4 @@ def run():
 
 if __name__ == "__main__":
     run()
+
