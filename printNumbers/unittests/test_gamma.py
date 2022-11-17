@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# test_factorial.py
+# test_gamma.py
 #
 # This file is part of PrintNumbers.
 #
@@ -20,34 +20,29 @@
 # along with PrintNumbers.  If not, see <http://www.gnu.org/licenses/>.
 
 #
-# Unit tests: 'factorial'.
+# Unit tests: 'gamma'.
 #
 
 import sys, os
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
 import unittest
-from functions.factorial import *
+from functions.gamma import *
 
-class TestFactorial(unittest.TestCase):
-
-    def test_value_0(self):
-        self.assertEqual(Factorial(0), 1)
+class TestGamma(unittest.TestCase):
 
     def test_value_1(self):
-        self.assertEqual(Factorial(1), 1)
+        self.assertEqual(Gamma(1), 1)
 
     def test_value_2(self):
-        self.assertEqual(Factorial(2), 2)
+        self.assertEqual(Gamma(2), 1)
 
-    def test_value_20(self):
-        self.assertEqual(Factorial(20), 2432902008176640000)
-    
-    def test_jane(self):
-        self.assertEqual(Factorial(5),3)
+    def test_value_21(self):
+        self.assertEqual(Gamma(21), 2432902008176640000)
+
 
 def suite():
-    suite = unittest.makeSuite(TestFactorial, 'test')
+    suite = unittest.makeSuite(TestGamma, 'test')
     return suite
 
 def run():
@@ -56,4 +51,3 @@ def run():
 
 if __name__ == "__main__":
     run()
-
