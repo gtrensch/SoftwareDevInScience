@@ -21,7 +21,7 @@
 
 import math
 
-def Sum_of_squares(n):
+def Sum_squares(n):
     '''
     :param n:  Operand
     :return:   n!
